@@ -1,0 +1,119 @@
+package com.sicpp.core.domain;
+
+import com.sicpp.core.domain.enums.UserTypeEnum;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
+import java.time.LocalDateTime;
+import java.util.Objects;
+import java.util.UUID;
+
+public class User {
+    private UUID id;
+    private String email;
+    private String password;
+    private String fullname;
+    private UserTypeEnum type;
+    private LocalDateTime createdAt;
+    private LocalDateTime updateAt;
+
+    public User(UUID id, String email, String password, String fullname, UserTypeEnum type, LocalDateTime createdAt, LocalDateTime updateAt) {
+        this.id = id;
+        this.email = email;
+        this.password = password;
+        this.fullname = fullname;
+        this.type = type;
+        this.createdAt = createdAt;
+        this.updateAt = updateAt;
+    }
+
+    public User(UUID id, String email, String password, String fullname, UserTypeEnum type, LocalDateTime createdAt) {
+        this.id = id;
+        this.email = email;
+        this.password = password;
+        this.fullname = fullname;
+        this.type = type;
+        this.createdAt = createdAt;
+    }
+
+    public User() {
+    }
+
+    public User(String email, String password, String fullname, UserTypeEnum type) {
+        this.id = id;
+        this.email = email;
+        this.password = password;
+        this.fullname = fullname;
+        this.type = type;
+        this.createdAt = LocalDateTime.now();
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
+    }
+
+    public UserTypeEnum getType() {
+        return type;
+    }
+
+    public void setType(UserTypeEnum type) {
+        this.type = type;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getUpdateAt() {
+        return updateAt;
+    }
+
+    public void setUpdateAt(LocalDateTime updateAt) {
+        this.updateAt = updateAt;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(id, user.id) && Objects.equals(email, user.email) && Objects.equals(password, user.password) && Objects.equals(fullname, user.fullname) && type == user.type && Objects.equals(createdAt, user.createdAt) && Objects.equals(updateAt, user.updateAt);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, email, password, fullname, type, createdAt, updateAt);
+    }
+}
