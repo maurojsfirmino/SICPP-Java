@@ -3,10 +3,8 @@ package com.sicpp.infrastructure.exception;
 
 import com.sicpp.core.exception.AuthenticateException;
 import com.sicpp.core.exception.EmailException;
-import com.sicpp.core.exception.enums.ErrorCodeEnum;
 import com.sicpp.infrastructure.dto.response.BaseResponse;
 import com.sicpp.infrastructure.dto.response.ErrorResponse;
-import com.sicpp.infrastructure.dto.response.ValidationError;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
