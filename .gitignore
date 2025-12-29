@@ -9,9 +9,15 @@
 *.log
 logs/
 
+# IntelliJ
+*.iml
+
 # H2 Database
 *.mv.db
 *.trace.db
+mvnw
+mvnw.cmd
+sicppdb.mv.db
 
 # OS
 .DS_Store
