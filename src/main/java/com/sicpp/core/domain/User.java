@@ -1,8 +1,6 @@
 package com.sicpp.core.domain;
 
 import com.sicpp.core.domain.enums.UserTypeEnum;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDateTime;
 import java.util.Objects;

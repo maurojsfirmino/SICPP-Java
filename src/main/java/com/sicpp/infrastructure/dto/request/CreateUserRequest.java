@@ -7,27 +7,15 @@ import jakarta.validation.constraints.NotNull;
 
 public record CreateUserRequest(
 
-        @Schema(
-                description = "E-mail do usuário",
-                example = "user@email.com"
-        )
+        @Schema(description = "E-mail do usuário")
         @NotBlank String email,
 
-        @Schema(
-                description = "Senha do usuário",
-                example = "123456"
-        )
+        @Schema(description = "Senha do usuário")
         @NotBlank String password,
 
-        @Schema(
-                description = "Nome completo do usuário",
-                example = "Mauro Firmino"
-        )
+        @Schema(description = "Nome completo do usuário")
         @NotBlank String fullname,
 
-        @Schema(
-                description = "Tipo do usuário",
-                example = "USER"
-        )
+        @Schema(description = "Tipo do usuário")
         @NotNull UserTypeEnum type
 ) {}
