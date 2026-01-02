@@ -12,3 +12,8 @@ spring:
     hibernate:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+security:
+  jwt:
+    secret: JoHGKriR5ySkLPnUrDII1IOcH4qIke0oLAuWw+CAsmA=
+    access-token-expiration: 900000        # 15 minutos
+    refresh-token-expiration: 86400000     # 1 dia
